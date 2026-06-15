@@ -21,7 +21,7 @@ documentazione tecnica e roadmap di progetto.
 Non tutti i progetti sono prodotti finiti. Alcuni repository sono prototipi, esperimenti o lavori in evoluzione.
 
 Progetti principali
-Offfice.it / Ufficio
+Ufficio
 
 Suite di strumenti online semplici, gratuiti e orientati alla privacy.
 
