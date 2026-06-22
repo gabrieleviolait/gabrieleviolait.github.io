@@ -6,14 +6,12 @@
 
   <meta name="google-site-verification" content="nnBDPj2tmfBSXnXLTjoM0N7TCNDnD5hvqx5qURjMLyM" />
 
-  <title>Gabriele Viola · Web Developer, Formazione e Cybersecurity</title>
+  <title>Gabriele Viola · Progetti pubblici, sviluppo web, cybersecurity e AI</title>
 
   <meta
     name="description"
-    content="Sito ufficiale e progetti di Gabriele Viola: sviluppo web (MePA), cybersecurity strategica (Difesa), intelligenza artificiale e docenza IT (GOL)."
+    content="Hub pubblico dei progetti di Gabriele Viola: sviluppo web, strumenti digitali, cybersecurity, AI, automazione, formazione aziendale e docenze GOL."
   />
-  
-  <meta name="keywords" content="Gabriele Viola, Gabriele, sviluppatore web, formatore GOL, MePA, cybersecurity difesa, intelligenza artificiale, portfolio, progetti GitHub" />
 
   <meta name="author" content="Gabriele Viola" />
   <meta name="robots" content="index, follow" />
@@ -22,16 +20,15 @@
   <link rel="canonical" href="https://gabrieleviolait.github.io/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Gabriele Viola · Progetti pubblici e Web Development" />
+  <meta property="og:title" content="Gabriele Viola · Progetti pubblici" />
   <meta
     property="og:description"
-    content="Repository, strumenti web, utility, prototipi e progetti pubblici legati a sviluppo web, cybersecurity e formazione digitale di Gabriele Viola."
+    content="Repository, strumenti web, utility, prototipi e progetti pubblici legati a sviluppo web, cybersecurity, AI e formazione digitale."
   />
   <meta property="og:url" content="https://gabrieleviolait.github.io/" />
   <meta property="og:site_name" content="Gabriele Viola · GitHub Hub" />
 
   <style>
-    /* ... [Tutto il tuo CSS originale inserito qui] ... */
     :root {
       --bg: #0f172a;
       --bg-soft: #111827;
@@ -49,11 +46,19 @@
       --max: 1120px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 34rem),
@@ -61,62 +66,485 @@
         linear-gradient(180deg, #0f172a 0%, #111827 48%, #0b1120 100%);
       line-height: 1.65;
     }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: white; }
-    .skip-link { position: absolute; left: -999px; top: 1rem; background: white; color: #0f172a; padding: 0.7rem 1rem; border-radius: 999px; z-index: 100; }
-    .skip-link:focus { left: 1rem; }
-    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); background: rgba(15, 23, 42, 0.76); border-bottom: 1px solid var(--line); }
-    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; }
-    .brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; letter-spacing: -0.03em; }
-    .brand-mark { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; color: white; font-weight: 900; background: linear-gradient(135deg, rgba(56, 189, 248, 0.95), rgba(129, 140, 248, 0.95)); box-shadow: 0 12px 35px rgba(56, 189, 248, 0.2); }
-    .nav-links { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
-    .nav-links a { color: var(--muted); font-size: 0.94rem; padding: 0.55rem 0.8rem; border-radius: 999px; }
-    .nav-links a:hover { color: white; background: rgba(255, 255, 255, 0.08); }
-    main { padding: 4rem 0 2.5rem; }
-    .hero { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 2rem; align-items: stretch; padding: 2.4rem; border: 1px solid var(--line); border-radius: calc(var(--radius) + 8px); background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04)); box-shadow: var(--shadow); overflow: hidden; position: relative; }
-    .hero::after { content: ""; position: absolute; inset: auto -10rem -14rem auto; width: 26rem; height: 26rem; background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 70%); pointer-events: none; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; color: #bae6fd; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.22); padding: 0.42rem 0.75rem; border-radius: 999px; font-size: 0.88rem; margin-bottom: 1rem; }
-    h1, h2, h3 { line-height: 1.12; margin: 0; letter-spacing: -0.04em; }
-    h1 { font-size: clamp(2.35rem, 6vw, 4.8rem); max-width: 850px; }
-    h2 { font-size: clamp(1.75rem, 3.2vw, 2.7rem); margin-bottom: 1rem; }
-    h3 { font-size: 1.24rem; margin-bottom: 0.6rem; }
-    p { margin: 0; color: var(--muted); }
-    .lead { font-size: clamp(1.08rem, 2vw, 1.32rem); max-width: 760px; margin-top: 1.2rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.6rem; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; padding: 0.85rem 1.05rem; border-radius: 999px; font-weight: 750; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.08); color: white; transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease; }
-    .btn:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.13); border-color: rgba(255, 255, 255, 0.24); }
-    .btn.primary { color: #08111f; background: linear-gradient(135deg, #67e8f9, #a5b4fc); border-color: transparent; }
-    .hero-card { padding: 1.3rem; border-radius: var(--radius); background: rgba(2, 6, 23, 0.48); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; gap: 1.4rem; min-height: 100%; position: relative; z-index: 2; }
-    .status-list { display: grid; gap: 0.8rem; }
-    .status-item { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); font-size: 0.95rem; }
-    .dot { width: 0.65rem; height: 0.65rem; margin-top: 0.45rem; border-radius: 99px; background: var(--good); box-shadow: 0 0 20px rgba(52, 211, 153, 0.65); flex: none; }
-    .dot.warn { background: var(--warn); box-shadow: 0 0 20px rgba(251, 191, 36, 0.55); }
-    section { padding: 4rem 0 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 1.2rem; }
-    .section-head p { max-width: 680px; }
-    .grid { display: grid; gap: 1rem; }
-    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .card { border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 1.35rem; box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12); transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease; }
-    .card:hover { transform: translateY(-3px); background: var(--panel-strong); border-color: rgba(255, 255, 255, 0.2); }
-    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 0.8rem; }
-    .tag { display: inline-flex; align-items: center; padding: 0.25rem 0.55rem; border-radius: 999px; font-size: 0.76rem; color: #dbeafe; background: rgba(96, 165, 250, 0.12); border: 1px solid rgba(96, 165, 250, 0.22); white-space: nowrap; }
-    .tag.green { color: #d1fae5; background: rgba(52, 211, 153, 0.11); border-color: rgba(52, 211, 153, 0.2); }
-    .tag.yellow { color: #fef3c7; background: rgba(251, 191, 36, 0.1); border-color: rgba(251, 191, 36, 0.22); }
-    .tag.purple { color: #ede9fe; background: rgba(167, 139, 250, 0.12); border-color: rgba(167, 139, 250, 0.24); }
-    .links { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
-    .mini-link { color: #dff7ff; background: rgba(255, 255, 255, 0.07); border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 0.7rem; font-size: 0.88rem; }
-    .mini-link:hover { color: white; background: rgba(255, 255, 255, 0.13); }
-    footer { margin-top: 4rem; border-top: 1px solid var(--line); padding: 2rem 0; color: var(--muted); text-align: center; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 1rem;
+      background: white;
+      color: #0f172a;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(15, 23, 42, 0.76);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.95), rgba(129, 140, 248, 0.95));
+      box-shadow: 0 12px 35px rgba(56, 189, 248, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    main {
+      padding: 4rem 0 2.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 2rem;
+      align-items: stretch;
+      padding: 2.4rem;
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10rem -14rem auto;
+      width: 26rem;
+      height: 26rem;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #bae6fd;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.22);
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.12;
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(2.35rem, 6vw, 4.8rem);
+      max-width: 850px;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.7rem);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .lead {
+      font-size: clamp(1.08rem, 2vw, 1.32rem);
+      max-width: 760px;
+      margin-top: 1.2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.85rem 1.05rem;
+      border-radius: 999px;
+      font-weight: 750;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.13);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .btn.primary {
+      color: #08111f;
+      background: linear-gradient(135deg, #67e8f9, #a5b4fc);
+      border-color: transparent;
+    }
+
+    .hero-card {
+      padding: 1.3rem;
+      border-radius: var(--radius);
+      background: rgba(2, 6, 23, 0.48);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.4rem;
+      min-height: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .status-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .status-item {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .dot {
+      width: 0.65rem;
+      height: 0.65rem;
+      margin-top: 0.45rem;
+      border-radius: 99px;
+      background: var(--good);
+      box-shadow: 0 0 20px rgba(52, 211, 153, 0.65);
+      flex: none;
+    }
+
+    .dot.warn {
+      background: var(--warn);
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.55);
+    }
+
+    section {
+      padding: 4rem 0 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-head p {
+      max-width: 680px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid.cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid.cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      padding: 1.35rem;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      background: var(--panel-strong);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      color: #dbeafe;
+      background: rgba(96, 165, 250, 0.12);
+      border: 1px solid rgba(96, 165, 250, 0.22);
+      white-space: nowrap;
+    }
+
+    .tag.green {
+      color: #d1fae5;
+      background: rgba(52, 211, 153, 0.11);
+      border-color: rgba(52, 211, 153, 0.2);
+    }
+
+    .tag.yellow {
+      color: #fef3c7;
+      background: rgba(251, 191, 36, 0.1);
+      border-color: rgba(251, 191, 36, 0.22);
+    }
+
+    .tag.purple {
+      color: #ede9fe;
+      background: rgba(167, 139, 250, 0.12);
+      border-color: rgba(167, 139, 250, 0.24);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+
+    .mini-link {
+      color: #dff7ff;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.5rem 0.7rem;
+      font-size: 0.88rem;
+    }
+
+    .mini-link:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .repo-list {
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .repo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .repo-row strong {
+      display: block;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .repo-row span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.18rem;
+    }
+
+    .timeline {
+      border-left: 1px solid var(--line);
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: calc(-1.2rem - 5px);
+      top: 0.4rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.1);
+    }
+
+    .note {
+      padding: 1.15rem;
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: var(--radius);
+      background: rgba(251, 191, 36, 0.08);
+      color: #fde68a;
+    }
+
+    .note p {
+      color: #fde68a;
+    }
+
+    footer {
+      margin-top: 4rem;
+      border-top: 1px solid var(--line);
+      padding: 2rem 0;
+      color: var(--muted);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
 
     @media (max-width: 900px) {
-      .hero, .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
-      .nav { align-items: flex-start; flex-direction: column; padding: 1rem 0; }
-      .nav-links { justify-content: flex-start; }
-      main { padding-top: 2rem; }
-      .hero { padding: 1.4rem; }
-      .section-head { align-items: flex-start; flex-direction: column; }
+      .hero,
+      .grid.cols-3,
+      .grid.cols-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      main {
+        padding-top: 2rem;
+      }
+
+      .hero {
+        padding: 1.4rem;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: min(100% - 22px, var(--max));
+      }
+
+      .nav-links a {
+        padding: 0.45rem 0.6rem;
+      }
+
+      .repo-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 
@@ -131,14 +559,14 @@
       "https://gabrieleviolait.github.io/",
       "https://www.linkedin.com/in/gabriele-viola"
     ],
-    "jobTitle": "Web Developer, Formatore GOL, Consulente IT e Cybersecurity",
+    "jobTitle": "Web Developer, Trainer, Consultant, Ethical Hacker and Author",
     "knowsAbout": [
       "Sviluppo Web",
-      "Forniture MePA",
-      "Formazione Digitale (GOL)",
-      "Cybersecurity (Settore Difesa)",
-      "Intelligenza Artificiale",
-      "WordPress"
+      "Corsi Aziendali",
+      "Formazione GOL",
+      "WordPress",
+      "Cybersecurity",
+      "Intelligenza Artificiale"
     ]
   }
   </script>
@@ -149,14 +577,17 @@
 
   <header>
     <nav class="wrap nav" aria-label="Navigazione principale">
-      <a class="brand" href="#top" aria-label="Gabriele Viola - Torna all'inizio">
+      <a class="brand" href="#top" aria-label="Torna all'inizio">
         <span class="brand-mark">GV</span>
         <span>Gabriele Viola</span>
       </a>
 
       <div class="nav-links">
         <a href="#progetti">Progetti</a>
+        <a href="#repository">Repository</a>
         <a href="#competenze">Competenze</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#approccio">Approccio</a>
         <a href="#contatti">Contatti</a>
       </div>
     </nav>
@@ -168,10 +599,10 @@
         <div>
           <span class="eyebrow">Hub pubblico · GitHub Pages</span>
 
-          <h1>Gabriele Viola · Progetti pubblici, strumenti web e sperimentazione tecnica.</h1>
+          <h1>Progetti pubblici, strumenti web e sperimentazione tecnica.</h1>
 
           <p class="lead">
-            Mi occupo di sviluppo web, consulenza IT, formazione digitale,
+            Sono Gabriele Viola. Mi occupo di sviluppo web, consulenza IT, formazione digitale,
             cybersecurity, automazione e progetti legati all’intelligenza artificiale.
           </p>
 
@@ -193,7 +624,7 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Sintesi dello spazio pubblico di Gabriele Viola">
+        <aside class="hero-card" aria-label="Sintesi dello spazio pubblico">
           <div>
             <h2 style="font-size: 1.35rem; margin-bottom: 1rem;">Cosa raccoglie questa pagina</h2>
 
@@ -248,7 +679,9 @@
               calcolatrici, utility e strumenti da ufficio leggeri.
             </p>
             <div class="links">
-              <a class="mini-link" href="https://offfice-it.pages.dev/" target="_blank" rel="noopener">Apri Ufficio</a>
+              <a class="mini-link" href="https://offfice-it.pages.dev/" target="_blank" rel="noopener">
+                Apri Ufficio
+              </a>
             </div>
           </article>
 
@@ -262,7 +695,9 @@
               memoria, rete, driver, comandi diagnostici e basso livello.
             </p>
             <div class="links">
-              <a class="mini-link" href="https://github.com/gabrieleviolait/ghostos" target="_blank" rel="noopener">Repository</a>
+              <a class="mini-link" href="https://github.com/gabrieleviolait/ghostos" target="_blank" rel="noopener">
+                Repository
+              </a>
             </div>
           </article>
 
@@ -276,7 +711,9 @@
               architetture decentralizzate e attenzione alla privacy.
             </p>
             <div class="links">
-              <a class="mini-link" href="https://github.com/gabrieleviolait/chatp2p" target="_blank" rel="noopener">Repository</a>
+              <a class="mini-link" href="https://github.com/gabrieleviolait/chatp2p" target="_blank" rel="noopener">
+                Repository
+              </a>
             </div>
           </article>
 
@@ -290,7 +727,9 @@
               memoria semantica, automazioni operative e flussi modulari.
             </p>
             <div class="links">
-              <a class="mini-link" href="https://github.com/gabrieleviolait/raptor-public" target="_blank" rel="noopener">Repository</a>
+              <a class="mini-link" href="https://github.com/gabrieleviolait/raptor-public" target="_blank" rel="noopener">
+                Repository
+              </a>
             </div>
           </article>
 
@@ -300,48 +739,317 @@
               <span class="tag green">sito professionale</span>
             </div>
             <p>
-              Progetto dedicato alla realizzazione di siti web professionali e landing page, con focus su 
-              performance, posizionamento e ottimizzazione architetturale.
+              Progetto dedicato a siti web professionali, WordPress, siti statici, sicurezza,
+              GDPR, manutenzione e presenza online.
             </p>
             <div class="links">
-              <span class="mini-link" style="opacity: 0.7;">In fase di sviluppo</span>
+              <a class="mini-link" href="https://sitoweb.info/" target="_blank" rel="noopener">
+                Visita il sito
+              </a>
+              <a class="mini-link" href="https://github.com/gabrieleviolait/sitoweb-info" target="_blank" rel="noopener">
+                Repository
+              </a>
             </div>
           </article>
 
           <article class="card">
             <div class="card-top">
-              <h3>Duel & Fights</h3>
-              <span class="tag purple">media & dev</span>
+              <h3>Plugin, script e utility</h3>
+              <span class="tag">tool pratici</span>
             </div>
             <p>
-              Ambiente di sviluppo strutturato a giugno 2026 per la sperimentazione sulla generazione video creativa, incentrato su animazioni ed effetti per scene di combattimento (es. scenari con creature preistoriche e fantasy).
+              Piccoli strumenti nati da esigenze reali: QR code, firme email, calcoli, password,
+              grafica online, automazioni, directory e script.
             </p>
             <div class="links">
-              <span class="mini-link" style="border-style: dashed; opacity: 0.7;">Work in progress</span>
+              <a class="mini-link" href="#repository">
+                Vedi repository
+              </a>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section id="repository">
+        <div class="section-head">
+          <div>
+            <h2>Repository pubblici selezionati</h2>
+            <p>
+              Collegamenti rapidi ai repository principali e agli strumenti pubblici.
+              Ogni progetto va valutato dal relativo README, dalla licenza e dallo stato di sviluppo.
+            </p>
+          </div>
+
+          <a class="btn" href="https://github.com/gabrieleviolait?tab=repositories" target="_blank" rel="noopener">
+            Tutti i repository
+          </a>
+        </div>
+
+        <div class="grid cols-2">
+          <div class="repo-list">
+            <a class="repo-row" href="https://github.com/gabrieleviolait/ghostos" target="_blank" rel="noopener">
+              <span>
+                <strong>ghostos</strong>
+                <span>OS sperimentale in Assembly/NASM.</span>
+              </span>
+              <span class="tag purple">Assembly</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/chatp2p" target="_blank" rel="noopener">
+              <span>
+                <strong>chatp2p</strong>
+                <span>Chat peer-to-peer sperimentale.</span>
+              </span>
+              <span class="tag yellow">JavaScript</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/raptor-public" target="_blank" rel="noopener">
+              <span>
+                <strong>raptor-public</strong>
+                <span>Condivisione parziale di progetto AI personale.</span>
+              </span>
+              <span class="tag">AI</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/sitoweb-info" target="_blank" rel="noopener">
+              <span>
+                <strong>sitoweb-info</strong>
+                <span>Sito e contenuti su sviluppo web professionale.</span>
+              </span>
+              <span class="tag green">HTML</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/gabrieleviolait.github.io" target="_blank" rel="noopener">
+              <span>
+                <strong>gabrieleviolait.github.io</strong>
+                <span>Hub pubblico su GitHub Pages.</span>
+              </span>
+              <span class="tag green">Page</span>
+            </a>
+          </div>
+
+          <div class="repo-list">
+            <a class="repo-row" href="https://github.com/gabrieleviolait/password-generator" target="_blank" rel="noopener">
+              <span>
+                <strong>password-generator</strong>
+                <span>Generatore password statico.</span>
+              </span>
+              <span class="tag green">Tool</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/simple-qrcode-generator" target="_blank" rel="noopener">
+              <span>
+                <strong>simple-qrcode-generator</strong>
+                <span>GeneratoreQR semplice.</span>
+              </span>
+              <span class="tag green">Tool</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/date-difference-calculator" target="_blank" rel="noopener">
+              <span>
+                <strong>date-difference-calculator</strong>
+                <span>Calcolo differenza tra date.</span>
+              </span>
+              <span class="tag green">Tool</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/email-signature-generator" target="_blank" rel="noopener">
+              <span>
+                <strong>email-signature-generator</strong>
+                <span>Generatore firme email.</span>
+              </span>
+              <span class="tag green">Tool</span>
+            </a>
+
+            <a class="repo-row" href="https://github.com/gabrieleviolait/windows-icon-changer" target="_blank" rel="noopener">
+              <span>
+                <strong>windows-icon-changer</strong>
+                <span>Script per cambio icone su Windows.</span>
+              </span>
+              <span class="tag">PowerShell</span>
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="competenze">
         <div class="section-head">
           <div>
-            <h2>Formazione, Pubblica Amministrazione & Sviluppo</h2>
+            <h2>Sviluppo Web & Formazione IT</h2>
             <p>
-              Da oltre tre anni conduco con successo corsi di formazione IT aziendale e docenze per il programma <strong>GOL (Garanzia Occupabilità Lavoratori)</strong>. 
-              Parallelamente, mi occupo di procurement e fornitura di servizi di sviluppo web e consulenza informatica accreditati tramite il portale acquisti <strong>MePA</strong>, unendo rigore tecnico e chiarezza didattica.
+              Oltre allo sviluppo di soluzioni web e alla consulenza tecnica, da oltre tre anni conduco con successo corsi di formazione IT aziendale e docenze per il programma <strong>GOL (Garanzia Occupabilità Lavoratori)</strong>. Il mio approccio unisce l'operatività tecnica a una forte attenzione per la chiarezza e la didattica.
             </p>
           </div>
         </div>
       </section>
 
+      <section id="ecosistema">
+        <div class="section-head">
+          <div>
+            <h2>Ecosistema pubblico</h2>
+            <p>
+              I repository sono solo una parte del lavoro: alcuni progetti vivono come siti,
+              strumenti pubblici, contenuti tecnici o servizi collegati.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid cols-3">
+          <article class="card">
+            <div class="card-top">
+              <h3>Sito personale</h3>
+              <span class="tag">profilo</span>
+            </div>
+            <p>
+              Punto di ingresso principale per attività professionale, servizi, contatti,
+              formazione e consulenza.
+            </p>
+            <div class="links">
+              <a class="mini-link" href="https://gabrieleviola.it" target="_blank" rel="noopener">
+                gabrieleviola.it
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Siti web e consulenza</h3>
+              <span class="tag green">web</span>
+            </div>
+            <p>
+              Area dedicata a realizzazione siti, WordPress, sicurezza, GDPR,
+              manutenzione e presenza online.
+            </p>
+            <div class="links">
+              <a class="mini-link" href="https://sitoweb.info/" target="_blank" rel="noopener">
+                sitoweb.info
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>GitHub</h3>
+              <span class="tag purple">codice</span>
+            </div>
+            <p>
+              Repository pubblici, README, licenze, prototipi, strumenti e progetti
+              pubblicati progressivamente.
+            </p>
+            <div class="links">
+              <a class="mini-link" href="https://github.com/gabrieleviolait" target="_blank" rel="noopener">
+                github.com/gabrieleviolait
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="approccio">
+        <div class="grid cols-2">
+          <article class="card">
+            <h2>Approccio</h2>
+            <p>
+              Uso GitHub come spazio pubblico per documentare progetti reali,
+              condividere codice selezionato e mostrare l’evoluzione del mio lavoro tecnico.
+            </p>
+            <br />
+            <p>
+              Mantengo separati codice pubblico, componenti privati, configurazioni sensibili,
+              ambienti personali, database, credenziali e file non destinati alla pubblicazione.
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>Stato dei progetti</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h3>Pubblicazione progressiva</h3>
+                <p>
+                  A partire dal 2026 sto riordinando e pubblicando progetti selezionati,
+                  README e documentazione.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Documentazione prima di tutto</h3>
+                <p>
+                  Alcuni repository sono dimostrativi, sperimentali o in evoluzione:
+                  il README resta la fonte migliore per stato, limiti e utilizzo.
+                </p>
+              </div>
+
+              <div class="timeline-item">
+                <h3>Separazione tra pubblico e privato</h3>
+                <p>
+                  Non tutto il codice personale viene pubblicato. Alcuni progetti restano privati
+                  per sicurezza, maturità o natura dell’infrastruttura.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="sicurezza">
+        <div class="note">
+          <h2 style="font-size: 1.6rem; margin-bottom: 0.65rem;">Sicurezza, privacy e responsabilità</h2>
+          <p>
+            I repository pubblici non devono contenere chiavi API, token, file <code>.env</code>,
+            credenziali, database personali o configurazioni private. I progetti sono forniti
+            principalmente a scopo dimostrativo, educativo, professionale o sperimentale.
+            Salvo diversa indicazione, il codice è fornito “as is”.
+          </p>
+        </div>
+      </section>
+
+      <section id="contatti">
+        <div class="section-head">
+          <div>
+            <h2>Contatti e canali ufficiali</h2>
+            <p>
+              Per informazioni professionali, consulenza, formazione o collaborazione,
+              usa i canali ufficiali collegati qui sotto.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid cols-3">
+          <a class="card" href="https://gabrieleviola.it" target="_blank" rel="noopener">
+            <h3>Sito personale</h3>
+            <p>gabrieleviola.it</p>
+          </a>
+
+          <a class="card" href="https://github.com/gabrieleviolait" target="_blank" rel="noopener">
+            <h3>GitHub</h3>
+            <p>github.com/gabrieleviolait</p>
+          </a>
+
+          <a class="card" href="https://www.linkedin.com/in/gabriele-viola" target="_blank" rel="noopener">
+            <h3>LinkedIn</h3>
+            <p>Profilo professionale</p>
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer>
-    <div class="wrap">
-      <p>&copy; 2026 Gabriele Viola. Progetti rilasciati progressivamente.</p>
+    <div class="wrap footer-grid">
+      <p>
+        © <span id="year"></span> Gabriele Viola · Progetti pubblici
+      </p>
+
+      <div class="footer-links">
+        <a href="https://gabrieleviola.it" target="_blank" rel="noopener">Sito</a>
+        <a href="https://github.com/gabrieleviolait" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/gabrieleviolait?tab=repositories" target="_blank" rel="noopener">Repository</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
